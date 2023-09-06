@@ -1,0 +1,35 @@
+.navbar{
+    margin: 50px 100px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .left{
+            .logo{
+                h1{
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: #28a745;
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            color: #28a745;
+            button{
+                background-color: #28a745;
+                border: none;
+                padding: 10px 30px;
+                font-weight: 300;
+                font-size: 18px;
+                color: #fff;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: #000;
+            }
+        }
+    }
+}

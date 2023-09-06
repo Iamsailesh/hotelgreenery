@@ -32,19 +32,27 @@ INSTALLED_APPS = [
     'testimonial_app',
     'gallery_app',
     'rest_framework',
-    'corsheaders',
+     'corsheaders'
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost",
+    "http://localhost:5173" # Add the origins you want to allow
+]
+CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+CORS_ALLOW_HEADERS = ['Content-Type', 'Authorization']
+
 
 ROOT_URLCONF = 'backend.urls'
 

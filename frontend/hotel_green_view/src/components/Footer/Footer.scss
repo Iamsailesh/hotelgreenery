@@ -11,6 +11,8 @@
             .left{
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 gap: 20px;
                 .logo{
                     h1{
@@ -21,8 +23,6 @@
                 }
                 .social{
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
                     gap: 10px;
                     color: #28a745;
                 }

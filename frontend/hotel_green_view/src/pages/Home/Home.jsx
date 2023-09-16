@@ -4,6 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios'
 import './Home.scss'
 import Banner from '../../components/Banner/Banner';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
     const [banners, setBanner] = useState([]);
@@ -28,6 +30,39 @@ const Home = () => {
                     <Banner item={ban} key={ban._id} />
                     ))}
                 </Carousel>
+            </div>
+            <div className="cmpTitle explore">
+              <h1>Hotel Greenery View</h1>
+              <p>Peaceful stay! Have an amazing stay here.</p>
+              <Link to='/' className='link'>Explore more</Link>
+            </div>
+            <div className="search">
+              <form>
+                <span>
+                  <label>Check In</label>
+                  <input type='text' name='check_in' placeholder='Choose date' />
+                </span>
+                <span>
+                  <label>Check Out</label>
+                  <input type='text' name='check_out' placeholder='Choose date' />
+                </span>
+                <span>
+                  <label>Room Type</label>
+                  <select>
+                    <option>--Select Room--</option>
+                    <option>Deluxe</option>
+                    <option>Premium</option>
+                  </select>
+                </span>
+                <span>
+                  <label>Email</label>
+                  <input type='text' name='email' placeholder='Email' />
+                </span>
+                <span>
+                  <label>Search</label>
+                  <button type='submit'>Check Now</button>
+                </span>
+              </form>
             </div>
         </div>
     </div>

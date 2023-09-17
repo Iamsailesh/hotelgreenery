@@ -1,8 +1,8 @@
-import React,{useState, useEffect} from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import React, { useState, useEffect } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import axios from 'axios'
-import './Home.scss'
+import axios from 'axios';
+import './Home.scss';
 import Banner from '../../components/Banner/Banner';
 import { Link } from 'react-router-dom';
 import Room from '../../components/Room/Room';
@@ -10,25 +10,50 @@ import Amenities from '../../components/Amenities/Amenities';
 import Testimonials from '../../components/Testimonials/Testimonials';
 
 
+
 const Home = () => {
-    const [banners, setBanner] = useState([]);
-    const [rooms, setRoom] = useState([]);
-    const [testimonials, setTestimonials] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-          try{
-            const resBan = await axios.get(`http://localhost:8000/gallery/Gallery/`);
-            setBanner(resBan.data)
-            const resRoom = await axios.get(`http://localhost:8000/room/Room/`);
-            setRoom(resRoom.data)
-            const resTest = await axios.get(`http://localhost:8000/testimonial/Testimonial/`);
-            setTestimonials(resTest.data)
-          } catch (error){
-            console.error(error);
-          }
-        }
-      fetchData();
-    }, [])
+  const [banners, setBanner] = useState([]);
+  const [rooms, setRoom] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
+  const [reservationData, setReservationData] = useState({
+    check_in: '',
+    check_out: '',
+    room_type: '', // You might want to add this field
+    email: '',
+  });
+  
+  const handleReservation = async(e) => {
+    e.preventDefault();
+    try {
+      const resReservation = await axios.post('http://localhost:8000/reservation/Reservation/', reservationData);
+    } catch (error) {
+        console.error(error.response?.data || error);
+    }
+  }
+  const handleChange = (e) => {
+    setReservationData({
+      ...reservationData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const resBan = await axios.get(`http://localhost:8000/gallery/Gallery/`);
+        setBanner(resBan.data);
+        const resRoom = await axios.get(`http://localhost:8000/room/Room/`);
+        setRoom(resRoom.data);
+        const resTest = await axios.get(`http://localhost:8000/testimonial/Testimonial/`);
+        setTestimonials(resTest.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
   <div className='home'>
     <div className="container">
@@ -45,18 +70,18 @@ const Home = () => {
         <Link to='/' className='link'>Explore more {'>'}</Link>
       </div>
       <div className="search">
-        <form>
+        <form onSubmit={handleReservation}>
           <span>
             <label>Check In</label>
-            <input type='text' name='check_in' placeholder='Choose date' />
+            <input type='date' name="check_in" placeholder="yyyy-MM-dd" onChange={handleChange}/>
           </span>
           <span>
             <label>Check Out</label>
-            <input type='text' name='check_out' placeholder='Choose date' />
+            <input type='date' name="check_out" placeholder="yyyy-MM-dd" onChange={handleChange}/>
           </span>
           <span>
             <label>Room Type</label>
-            <select>
+            <select name="room_type" onChange={handleChange}>
               <option>--Select Room--</option>
               <option>Deluxe</option>
               <option>Premium</option>
@@ -64,7 +89,7 @@ const Home = () => {
           </span>
           <span>
             <label>Email</label>
-            <input type='text' name='email' placeholder='Email' />
+            <input type='text' name='email' placeholder='Email' onChange={handleChange}/>
           </span>
           <span>
             <label>Search</label>
@@ -139,6 +164,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+
     </div>
   </div>
   );

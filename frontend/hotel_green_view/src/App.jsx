@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 
 //import pages
 import Home from "./pages/Home/Home";
+import About from "./pages/About Us/About";
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
         {
           path: '/',
           element: <Home />
+        },
+        {
+          path: '/about',
+          element: <About />
         },
       ]
     }

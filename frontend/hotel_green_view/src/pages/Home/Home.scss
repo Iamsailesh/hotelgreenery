@@ -8,10 +8,11 @@
             justify-content: center;
             align-items: center;
             gap: 20px;
-
+            margin-top: 100px;
             h1{
                 font-size: 3rem;
                 font-weight: 700;
+                color: #28a745;
             }
             p{
                 font-size: 1.8rem;
@@ -26,6 +27,12 @@
             width: 100%;
             padding: 20px 0px;
             color: aliceblue;
+            h1{
+                color: aliceblue;
+            }
+            p{
+                color: aliceblue;
+            }
         }
         .search{
             background-color: rgba(40, 167, 69, 0.8);
@@ -66,6 +73,85 @@
                     }
                     
                 }
+            }
+        }
+        .desc{
+            display: flex;
+            margin: 100px 100px 0px 100px;
+            justify-content: space-between;
+            .left{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .text{
+                    font-size: 2rem;
+                    font-weight: 500;
+                    max-width: 65%;
+                    color: #28a745;
+                }
+                .title{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color:#28a745;
+                }
+            }
+            .right{
+                max-width: 50%;
+                font-size: 1.2rem;
+            }
+        }
+        .room{
+            display: flex;
+            gap: 350px;
+        }
+        .restaurant{
+            margin: 0px 100px;
+            display: flex;
+            justify-content: space-between;
+            .left{
+                img{
+                    width: 500px;
+                    max-height: 400px;
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                width: 600px;
+                background-color: #90EE90;
+                padding: 20px 30px;
+                border-radius: 20px;
+                h1{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                }
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+                button{
+                    background: transparent;
+                    border: 1px solid #000;
+                    border-radius: 15px;
+                    padding: 10px 30px;
+                    font-weight: 700;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .testimonials{
+            margin: 100px 0px;
+            background-color: #28a745;
+            .test{
+                h1{
+                    color: aliceblue;
+                }
+            }
+            .review{
+                display: flex;
+
             }
         }
     }

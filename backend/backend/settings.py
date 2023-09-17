@@ -32,7 +32,8 @@ INSTALLED_APPS = [
     'testimonial_app',
     'gallery_app',
     'rest_framework',
-     'corsheaders'
+     'corsheaders',
+     'reservation_app'
 ]
 
 MIDDLEWARE = [

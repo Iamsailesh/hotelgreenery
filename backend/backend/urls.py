@@ -11,6 +11,7 @@ urlpatterns = [
     path('testimonial/', include('testimonial_app.urls')),
     path('room/', include('room_app.urls')),
     path('gallery/', include('gallery_app.urls')),
+    path('reservation/', include('reservation_app.urls'))
 ]
 
 # Serve media files during development

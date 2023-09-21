@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 //import pages
 import Home from "./pages/Home/Home";
 import About from "./pages/About Us/About";
+import Room from "./pages/Room/Room";
 
 
 function App() {
@@ -38,6 +39,10 @@ function App() {
         {
           path: '/about',
           element: <About />
+        },
+        {
+          path: '/room',
+          element: <Room />
         },
       ]
     }

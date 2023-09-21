@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './Room.scss'
 
 const Room = ({item}) => {
+    console.log(item)
   return (
     <div className="room">
         <div className="image">
@@ -20,7 +21,9 @@ const Room = ({item}) => {
                     <p>Starting from <span className='present'>Rs.{item.present_price}</span></p>
                 )}
             </span>
-            <Link className='link' to=''><button>View & Book</button></Link>
+            <Link to={`/room?room_name=${item.room_name}&description=${item.short_description}&image=${item.image}&price=${item.present_price}`} className='link'>
+                <button>View & Book</button>
+            </Link>
         </div>
     </div>
   )

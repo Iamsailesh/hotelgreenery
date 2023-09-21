@@ -9,8 +9,6 @@ import Room from '../../components/Room/Room';
 import Amenities from '../../components/Amenities/Amenities';
 import Testimonials from '../../components/Testimonials/Testimonials';
 
-
-
 const Home = () => {
   const [banners, setBanner] = useState([]);
   const [rooms, setRoom] = useState([]);
@@ -121,7 +119,7 @@ const Home = () => {
         <h1>Our Rooms & Suites</h1>
         <p>Modern Living made available in the most luxurious way for everyone to enjoy</p>
       </div>
-      <div className="room">
+      <div id= "1" className="room">
         {rooms.slice(0,2).map(room => (
           <Room item={room} key={room._id} />
         ))}
@@ -135,7 +133,7 @@ const Home = () => {
       </div>
       <div className="restaurant">
         <div className="left">
-          <img src='vite.svg' />
+          <img src='image1.jpg' />
         </div>
         <div className="right">
           <h1>

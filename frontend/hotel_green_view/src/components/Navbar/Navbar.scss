@@ -1,14 +1,12 @@
 .navbar{
-    margin: 50px 100px;
+    margin: 0px 100px;
     .container{
         display: flex;
         justify-content: space-between;
         .left{
             .logo{
-                h1{
-                    font-size: 3rem;
-                    font-weight: 700;
-                    color: #28a745;
+                img{
+                    height: 120px;
                 }
             }
         }

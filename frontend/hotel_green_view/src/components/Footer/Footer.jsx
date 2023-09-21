@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
   return (
@@ -9,12 +11,12 @@ const Footer = () => {
             <div className="top">
               <div className="left">
                 <div className="logo">
-                  <h1>HGV</h1>
+                  <img src='new.png' />
                 </div>
                 <span>Follow Us On</span>
                 <span className='social'>
-                  <h3>F</h3>
-                  <h3>G</h3>
+                  <Link to='/'><FontAwesomeIcon icon={faFacebook} /></Link>
+                  <Link to='/'><FontAwesomeIcon icon={faYoutube} style={{color: "#ff2600",}} /></Link>
                 </span>
               </div>
               <div className="center">
@@ -31,11 +33,7 @@ const Footer = () => {
                 <div className="links">
                   <Link to='/' className='link'>HOME</Link>
                   <Link to='/' className='link'>ABOUT US</Link>
-                  <Link to='/' className='link'>AMENITIES</Link>
-                  <Link to='/' className='link'>ROOM TARIFF</Link>
-                  <Link to='/' className='link'>NEAR BY PLACES</Link>
                   <Link to='/' className='link'>GALLERY</Link>
-                  <Link to='/' className='link'>CONTACT US</Link>
                 </div>
               </div>
             </div>

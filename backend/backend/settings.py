@@ -49,8 +49,10 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
-    "http://localhost:5173" # Add the origins you want to allow
+    "http://localhost:5173",
+    "http://localhost:3000"# Add the origins you want to allow
 ]
+
 CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 CORS_ALLOW_HEADERS = ['Content-Type', 'Authorization']
 

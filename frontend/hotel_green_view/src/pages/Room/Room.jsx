@@ -15,7 +15,7 @@ const Room = () => {
         check_in: '',
         check_out: '',
         room_type: roomName, // You might want to add this field
-        email: '',
+        phone: '',
     });
     
     const handleReservation = async(e) => {
@@ -56,8 +56,8 @@ const Room = () => {
                             <input type='text' name="room_type" value = {roomName}/>
                         </span>
                         <span>
-                            <label>Email</label>
-                            <input type='text' name='email' placeholder='Email' onChange={handleChange}/>
+                            <label>Phone</label>
+                            <input type='text' name='phone' placeholder='Phone Number' onChange={handleChange}/>
                         </span>
                         <span>
                             <button type='submit'>Reserve Now</button>

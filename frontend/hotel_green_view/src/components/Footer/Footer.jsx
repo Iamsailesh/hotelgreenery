@@ -32,8 +32,8 @@ const Footer = () => {
                 </div>
                 <div className="links">
                   <Link to='/' className='link'>HOME</Link>
-                  <Link to='/' className='link'>ABOUT US</Link>
-                  <Link to='/' className='link'>GALLERY</Link>
+                  <Link to='/about' className='link'>ABOUT US</Link>
+                  <Link to='/gallery' className='link'>GALLERY</Link>
                 </div>
               </div>
             </div>

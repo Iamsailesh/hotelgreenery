@@ -17,7 +17,7 @@ const Home = () => {
     check_in: '',
     check_out: '',
     room_type: '', // You might want to add this field
-    email: '',
+    phone: '',
   });
   
   const handleReservation = async(e) => {
@@ -86,8 +86,8 @@ const Home = () => {
             </select>
           </span>
           <span>
-            <label>Email</label>
-            <input type='text' name='email' placeholder='Email' onChange={handleChange}/>
+            <label>Phone</label>
+            <input type='text' name='phone' placeholder='Phone Number' onChange={handleChange}/>
           </span>
           <span>
             <label>Search</label>
@@ -154,7 +154,6 @@ const Home = () => {
       <div className="testimonials">
         <div className="cmpTitle test">
           <h1>What Guest are Saying</h1>
-          <p>A wide range of amenities for the visitors and guests to enjoy and relax</p>
         </div>
         <div className="logo">
           <img src='google.png' />

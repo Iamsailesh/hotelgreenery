@@ -65,7 +65,7 @@ const Home = () => {
       <div className="cmpTitle explore">
         <h1>Hotel Greenery View</h1>
         <p>Peaceful stay! Have an amazing stay here.</p>
-        <Link to='/' className='link'>Explore more {'>'}</Link>
+        <Link to='/gallery' className='link'>Explore more {'>'}</Link>
       </div>
       <div className="search">
         <form onSubmit={handleReservation}>
@@ -148,7 +148,7 @@ const Home = () => {
             We prepare quality meals to serve you with wholesome and delicious 
             platters curated using selected ingredients, fresh herbs and spices.
           </p>
-          <Link className='link' to=''><button>Read More</button></Link>
+          <Link className='link' to='/about'><button>Read More</button></Link>
         </div>
       </div>
       <div className="testimonials">

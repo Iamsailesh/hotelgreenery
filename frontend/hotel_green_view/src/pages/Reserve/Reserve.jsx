@@ -14,6 +14,7 @@ const Reserve = () => {
         e.preventDefault();
         try {
             const resReservation = await axios.post('http://localhost:8000/reservation/Reservation/', reservationData);
+            window.location.href = '/'
         } catch (error) {
             console.error(error.response?.data || error);
         }

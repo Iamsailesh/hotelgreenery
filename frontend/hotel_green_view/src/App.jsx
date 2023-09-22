@@ -14,6 +14,8 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import About from "./pages/About Us/About";
 import Room from "./pages/Room/Room";
+import Reserve from "./pages/Reserve/Reserve";
+import Gallery from "./pages/Gallery/Gallery";
 
 
 function App() {
@@ -43,6 +45,14 @@ function App() {
         {
           path: '/room',
           element: <Room />
+        },
+        {
+          path: '/reserve',
+          element: <Reserve />
+        },
+        {
+          path: '/gallery',
+          element: <Gallery />
         },
       ]
     }

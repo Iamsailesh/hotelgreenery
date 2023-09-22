@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="top">
               <div className="left">
                 <div className="logo">
-                  <img src='new.png' />
+                  <Link to='/' className='link'><img src='new.png' alt="Logo" /></Link>
                 </div>
                 <span>Follow Us On</span>
                 <span className='social'>

@@ -15,7 +15,6 @@ const About = () => {
         const fetchData = async () => {
           try{
             const resBan = await axios.get(`http://localhost:8000/gallery/Gallery/`);
-            console.log(resBan.data)
             setBanner(resBan.data)
             const resRoom = await axios.get(`http://localhost:8000/room/Room/`);
             setRoom(resRoom.data)
@@ -31,7 +30,7 @@ const About = () => {
     <div className='about'>
         <div className="container">
             <div className="banner">
-                <Carousel autoPlay>
+            <Carousel autoPlay infiniteLoop showThumbs={false} showArrows={false} showStatus={false} showIndicators={false} autoFocus>
                     {banners.slice(3, 5).map(ban => (
                         <Banner item={ban} key={ban.id} />
                     ))}
@@ -50,7 +49,7 @@ const About = () => {
             </div>
             <div className="content-1">
                 <div className="left">
-                    <img src='image1.jpg' />
+                    <img src='organic.jpg' />
                 </div>
                 <div className="right">
                     <div className="title">
@@ -81,12 +80,12 @@ const About = () => {
                     </div>
                 </div>
                 <div className="right">
-                    <img src='image1.jpg' />
+                    <img src='meeting.jpg' />
                 </div>
             </div>
             <div className="content-1">
                 <div className="left">
-                    <img src='image1.jpg' />
+                    <img src='banquet.jpg' />
                 </div>
                 <div className="right">
                     <div className="title">

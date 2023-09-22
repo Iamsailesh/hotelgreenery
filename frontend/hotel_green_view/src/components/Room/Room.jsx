@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './Room.scss'
 
 const Room = ({item}) => {
-    console.log(item)
   return (
     <div className="room">
         <div className="image">

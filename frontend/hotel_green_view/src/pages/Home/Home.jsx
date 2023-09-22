@@ -56,7 +56,7 @@ const Home = () => {
   <div className='home'>
     <div className="container">
       <div className="banner">
-          <Carousel autoPlay>
+          <Carousel autoPlay infiniteLoop showThumbs={false} showArrows={false} showStatus={false} showIndicators={false} autoFocus>
               {banners.slice(0, 3).map(ban => (
               <Banner item={ban} key={ban.id} />
               ))}
@@ -133,7 +133,7 @@ const Home = () => {
       </div>
       <div className="restaurant">
         <div className="left">
-          <img src='image1.jpg' />
+          <img src='restaurant.jpg' />
         </div>
         <div className="right">
           <h1>
@@ -155,6 +155,11 @@ const Home = () => {
         <div className="cmpTitle test">
           <h1>What Guest are Saying</h1>
           <p>A wide range of amenities for the visitors and guests to enjoy and relax</p>
+        </div>
+        <div className="logo">
+          <img src='google.png' />
+          <img src='trip.png' />
+          <img src='booking.png' />
         </div>
         <div className="review">
           {testimonials.slice(0,2).map(test => (

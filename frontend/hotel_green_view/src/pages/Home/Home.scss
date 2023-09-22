@@ -60,7 +60,10 @@
                         font-size: 1.2rem;
                     }
                     select{
-                        font-size: 1.5rem;
+                        padding: 10px 70px;
+                        border: none;
+                        border-radius: 20px;
+                        font-size: 1.6rem;
                     }
                     button{
                         background-color: aliceblue;
@@ -78,27 +81,28 @@
         }
         .desc{
             display: flex;
-            margin: 100px 100px 0px 100px;
+            margin: 150px 100px 0px 100px;
             justify-content: space-between;
             .left{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 .text{
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                     font-weight: 500;
                     max-width: 65%;
                     color: #28a745;
                 }
                 .title{
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                     font-weight: 700;
                     color:#28a745;
                 }
             }
             .right{
                 max-width: 50%;
-                font-size: 1.2rem;
+                font-size: 2rem;
+                text-align: justify;
             }
         }
         .room{
@@ -145,15 +149,25 @@
         }
         .testimonials{
             margin: 100px 0px;
-            background-color: #28a745;
+            background-color: #90EE90;
+            .logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin: 50px 0px 0px 0px;
+                img{
+                    width: auto;
+                    height: 50px;
+                }
+            }
             .test{
                 h1{
-                    color: aliceblue;
+                    color: #000;
                 }
             }
             .review{
                 display: flex;
-
             }
         }
     }

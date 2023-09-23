@@ -7,4 +7,4 @@ class Reservation(models.Model):
     check_in = models.DateField(default=timezone.now)  # Set default to the current date
     check_out = models.DateField(default=timezone.now)
     room_type =  models.CharField(max_length=20)
-    email = models.EmailField()
+    phone = models.CharField(max_length=20, default=None )

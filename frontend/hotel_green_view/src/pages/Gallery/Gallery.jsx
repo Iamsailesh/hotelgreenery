@@ -21,11 +21,87 @@ const Gallery = () => {
   return (
     <div className='gallery'>
         <div className='container'>
-            {photos.map((photo) => (
-            <div className='image' key={photo.id} onClick={() => handleImageClick(photo.image)}>
-                <img src={photo.image} alt={`Image ${photo.id}`} />
-            </div>
-            ))}
+           <span>
+              <img src="meeting.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           
+          
+           <span>
+              <img src="55.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="7.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="8.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="9.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="10.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="11.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="12.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           
+           <span>
+              <img src="14.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="15.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="17.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="18.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="19.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           <span>
+              <img src="21.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="12.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="23.JPG" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="4.jpeg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="5.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="8.jpg" alt="" />´
+              <h2>Hotel Greenery View</h2>
+           </span><span>
+              <img src="11.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+           
+           <span>
+              <img src="0.jpg" alt="" />
+              <h2>Hotel Greenery View</h2>
+           </span>
+          
         </div>
     </div>
   );

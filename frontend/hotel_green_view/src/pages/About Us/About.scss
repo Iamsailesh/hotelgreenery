@@ -88,19 +88,38 @@
         .room{
             display: flex;
             gap: 350px;
+            justify-content: center;
+            align-items: center;
         }
         .testimonials{
-            margin: 50px 0px;
+            margin: 100px 0px;
             background-color: #90EE90;
+            .logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin: 50px 0px 0px 0px;
+                img{
+                    width: auto;
+                    height: 50px;
+                }
+            }
             .test{
                 h1{
-                    margin-top: 50px;
-                    color: aliceblue;
+                    color: #000;
                 }
             }
             .review{
                 display: flex;
-
+                justify-content: center ;
+                align-items: center;
+                gap: 50px;
+                margin: 50px;
+            }
+            p{
+                font-weight: 500;
+                font-size: 20px;
             }
         }
         .conditions{

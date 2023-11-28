@@ -2,6 +2,13 @@
     .container{
         display: flex;
         flex-direction: column;
+        .banner{
+            img{
+                width: 1920px;
+                height: 800px;
+                object-fit: cover;
+            }
+        }
         .cmpTitle{
             display: flex;
             flex-direction: column;
@@ -108,6 +115,8 @@
         .room{
             display: flex;
             gap: 350px;
+            justify-content: center;
+            align-items: center;
         }
         .restaurant{
             margin: 0px 100px;
@@ -168,6 +177,14 @@
             }
             .review{
                 display: flex;
+                justify-content: center ;
+                align-items: center;
+                gap: 50px;
+                margin: 50px;
+            }
+            p{
+                font-weight: 500;
+                font-size: 20px;
             }
         }
     }

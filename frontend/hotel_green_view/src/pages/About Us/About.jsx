@@ -101,21 +101,65 @@ const About = () => {
             <div className="cmpTitle">
                 <h1>Rooms & Suites</h1>
             </div>
-            <div className="room">
-                {rooms.slice(0,2).map(room => (
-                <Room item={room} key={room._id} />
-                ))}
+            <div id="1" className="room">
+         <div className="card">
+         <div className="image">
+            <img src="luxuryDelux.jpeg" />
+          </div>
+          <div className="details">
+            <h3>Luxury Deluxe</h3>
+            <p>Hotel Greenery View Offerto Our Respectable Guest Luxury Deluxe Room, Which Is 154/Squar Fit Of Floor.This Refind Living Experience has Distinct Clour Schems And Ethnic Flourishes.we Also Open Our Balcony With View Of The Gangtok Famuse Mountain.And</p>
+            <hr />
+            <span>
+              <p>Starting from <span className='present'>NA</span></p>
+            </span>
+
+            <button>View & Book</button>
+
+          </div>
+         </div>
+         <div className="card">
+         <div className="image">
+            <img src="luxurypremium2.jpeg" />
+          </div>
+          <div className="details">
+              <h3>Luxury Premium</h3>
+              <p>The Extensive and Eclectic Accommodation 168/Squar Fitiels Floor. You Can See Gangtok Famous Valley From Your Room Bed</p>
+              <hr />
+              <span>
+                <p>Starting from <span className='present'>NA</span></p>
+              </span>
+
+              <button>View & Book</button>
+
             </div>
-            <div className="testimonials">
-                <div className="cmpTitle test">
-                    <h1>What Guest are Saying</h1>
-                </div>
-                <div className="review">
-                    {testimonials.slice(0,2).map(test => (
-                        <Testimonials item={test} key={test.id} />
-                    ))}
-                </div>
+         </div>
+          {/* {rooms.slice(0,2).map(room => (
+          <Room item={room} key={room._id} />
+        ))} */}
+        </div>
+        <div className="testimonials">
+          <div className="cmpTitle test">
+            <h1>What Guest are Saying</h1>
+          </div>
+          <div className="logo">
+            <img src='google.png' />
+            <img src='trip.png' />
+            <img src='booking.png' />
+          </div>
+          <div className="review">
+            <div className="container">
+              <h1>Anil Kumar Sharma</h1>
+              <p>Hotel Greenery View exceeded expectations with impeccable service, luxurious amenities, and a central location, creating a truly unforgettable stay.</p>
+              <h3>Kolkata</h3>
             </div>
+            <div className="container">
+              <h1>Amitav Jain</h1>
+              <p>Wow! Hotel Greenery View is super cool. The people who work there are really nice and make you feel special. The room was like a fancy home with comfy beds and everything you need. The food was yummy, and the hotel had a great vibe. I can't wait to go back because it was so much fun!</p>
+              <h3>Delhi</h3>
+            </div>
+          </div>
+        </div>
             <div className="cmpTitle">
                 <h1>TERMS & CONDITIONS</h1>
             </div>

@@ -108,11 +108,10 @@ const Home = () => {
         </div>
         <div className="right">
           <span>
-            Hotel Greenery View in Tadong, Gangtok is a top player in the category
-            Hotels in the Gangtok. This well-known establishment acts as a one stop
-            destination servicing customers both local and from other parts of Gangtok.
-            Over the course of its journey, this business has estalbished a firm foothold
-            in it's industry.
+          Hotel GREENERY view located at Lingding East Sikkim is 10 minute drive for Gangtok main town and 5 minutes drive from
+         siliguri Taxi stand . The Hotel Greenery view gives you pleasure of homely environment 
+          where you can enjoy the Mesmerising view of floora funna of of Sikkim. Hotel gives you extremely alluring, 
+          pleasantly boisterous and spectacular view of greenery nestled below Mt.Kanchenjunga ( The third highest mountain of the World.)
           </span>
         </div>
       </div>

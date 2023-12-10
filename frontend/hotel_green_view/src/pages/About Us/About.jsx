@@ -41,10 +41,10 @@ const About = () => {
             </div>
             <div className="desc">
                 <p>
-                    Hotel Greenery View Middle Lingding ICAR Road is located in Gangtok, within a 14-minute walk of Sikkim Manipal University and 1.4 km of Do Drul Chorten Shrine. Among the facilities of this property are a restaurant, a 24-hour front desk and room service, along with free WiFi. The hotel features family rooms.
-                    Guest rooms at the hotel are equipped with a seating area, a flat-screen TV with cable channels and a private bathroom with free toiletries and a shower. The rooms include a desk.
-                    Guests at Hotel Greenery View Middle can enjoy a continental breakfast.
-                    Enchey Monastery is 4.5 km from the accommodation, while Ganesh Tok Temple is 5.1 km away. The nearest airport is Bagdogra Airport, 119.1 km from FabHotel Greenery View Middle Lingding ICAR Road.
+                One of the finest hotels in Gangtok is Hotel Greenery View, located in Tadong, Gangtok. This well-known business serves both 
+                local and out-of-town consumers as a one-stop shop for services. This company has made significant progress along the way and now 
+                firmly holds a position in its sector. This business has amassed a sizable client base that is only continuing to expand because of 
+                its firm belief that customer happiness is just as vital as its goods and services.
                 </p>
             </div>
             <div className="content-1">

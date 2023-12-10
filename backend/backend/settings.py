@@ -15,6 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY','0')
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
 if os.environ.get('DEPLOYED','0')=='0':
@@ -91,15 +92,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 if os.environ.get('DEPLOYED','0')=='0':
 
-    DATABASES={
-        'default':{
-            'ENGINE':'django.db.backends.mysql',
-            'NAME':os.environ.get('DB_NAME','0'),
-            
-        }
-    }
-
-else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -113,6 +105,14 @@ else:
                 'charset': 'utf8mb4',
                 "autocommit": True,
             }
+        }
+    }
+else:
+    DATABASES={
+        'default':{
+            'ENGINE':'django.db.backends.sqlite3',
+            'NAME':os.environ.get('DB_NAME','0'),
+            
         }
     }
     

@@ -91,7 +91,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 if os.environ.get('DEPLOYED','0')=='0':
-
     DATABASES = {
         'default': {
             'ENGINE': 'mysql.connector.django',
@@ -100,11 +99,6 @@ if os.environ.get('DEPLOYED','0')=='0':
             'PORT': os.environ.get('DB_PORT', '0'),
             'USER': os.environ.get('DB_USER_NAME', '0'),
             'PASSWORD': os.environ.get('DB_PASSWORD', '0'),
-            "OPTION": {
-                'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
-                'charset': 'utf8mb4',
-                "autocommit": True,
-            }
         }
     }
 else:

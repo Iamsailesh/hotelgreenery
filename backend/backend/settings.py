@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 if os.environ.get('DEPLOYED','0')=='0':
     DATABASES = {
         'default': {
-            'ENGINE': 'mysql.connector.django',
+            'ENGINE': 'django.db.backends.mysql',
             'NAME': os.environ.get('DB_NAME', '0'),
             'HOST': os.environ.get('DB_HOST', '0'),
             'PORT': os.environ.get('DB_PORT', '0'),

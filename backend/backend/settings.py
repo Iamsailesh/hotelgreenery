@@ -15,7 +15,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY','0')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 
 if os.environ.get('DEPLOYED','0')=='0':
@@ -23,9 +22,9 @@ if os.environ.get('DEPLOYED','0')=='0':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['https://hotelgreeneryview.com','www.hotelgreeneryview.com','hotelgreeneryview.com','https://api.hotelgreeneryview.com',
+ALLOWED_HOSTS = ['https://hotelgreeneryview.com','www.hotelgreeneryview.com','hotelgreeneryview.com','http://api.hotelgreeneryview.com',
 'api.hotelgreeneryview.com',
-'www.api.hotelgreeneryview.com', '127.0.0.1']
+'www.api.hotelgreeneryview.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -161,7 +160,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = "media/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "media"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
-MEDIA_URL = "media"
-MEDIA_ROOT = os.path.join(BASE_DIR, "static_files")
+MEDIA_URL = "medias/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "static_files/medias")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 

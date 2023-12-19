@@ -60,7 +60,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
-    "https://hotelgreeneryview.com"
+    "https://hotelgreeneryview.com",
+    'http://api.hotelgreeneryview.com'
 ]
 
 CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']

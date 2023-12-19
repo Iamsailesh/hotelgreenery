@@ -25,7 +25,7 @@ else:
 
 ALLOWED_HOSTS = ['https://hotelgreeneryview.com','www.hotelgreeneryview.com','hotelgreeneryview.com','https://api.hotelgreeneryview.com',
 'api.hotelgreeneryview.com',
-'www.api.hotelgreeneryview.com']
+'www.api.hotelgreeneryview.com', '127.0.0.1']
 
 
 # Application definition
@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'testimonial_app',
     'gallery_app',
     'rest_framework',
-     'corsheaders',
-     'reservation_app'
+    'corsheaders',
+    'reservation_app'
 ]
 
 MIDDLEWARE = [
@@ -61,8 +61,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
-    "http://localhost:5173",
-    "http://localhost:3000"# Add the origins you want to allow
+    "https://hotelgreeneryview.com"
 ]
 
 CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
@@ -108,7 +107,7 @@ else:
     DATABASES={
         'default':{
             'ENGINE':'django.db.backends.sqlite3',
-            'NAME':os.environ.get('DB_NAME','0'),
+            'NAME':os.environ.get('DB_NAME','db.sqlite3'),
             
         }
     }
@@ -159,7 +158,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATIC_URL = "media/"
+STATIC_URL = "/media/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "media"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "static_files")
 MEDIA_URL = "src/user_upload/"

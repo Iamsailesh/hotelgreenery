@@ -22,7 +22,7 @@ if os.environ.get('DEPLOYED','0')=='0':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['https://hotelgreeneryview.com','https://api.hotelgreeneryview.com',
+ALLOWED_HOSTS = ['https://hotelgreeneryview.com','https://api.hotelgreeneryview.com', 'www.api.hotelgreeneryview.com', 'api.hotelgreeneryview.com'
                  '127.0.0.1', 'localhost']
 
 

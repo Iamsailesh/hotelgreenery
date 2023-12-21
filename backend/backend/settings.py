@@ -22,7 +22,7 @@ if os.environ.get('DEPLOYED','0')=='0':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['https://hotelgreeneryview.com','http://api.hotelgreeneryview.com',
+ALLOWED_HOSTS = ['https://hotelgreeneryview.com','https://api.hotelgreeneryview.com',
                  '127.0.0.1', 'localhost']
 
 
@@ -60,7 +60,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "https://hotelgreeneryview.com",
-    'http://api.hotelgreeneryview.com'
+    'https://api.hotelgreeneryview.com'
 ]
 
 CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']

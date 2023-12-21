@@ -3,7 +3,7 @@ from PIL import Image
 
 # Create your models here.
 class Gallery(models.Model):
-    image = models.ImageField(upload_to='gallery/')  
+    image = models.ImageField(upload_to='/')  
     
     def save(self, *args, **kwargs):
         # Open the image file

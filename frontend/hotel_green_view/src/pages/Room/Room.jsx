@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import "./Room.scss"
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
+import config from '../../config';
 
 const Room = () => {
     const location = useLocation();
@@ -14,14 +15,14 @@ const Room = () => {
     const [reservationData, setReservationData] = useState({
         check_in: '',
         check_out: '',
-        room_type: roomName, // You might want to add this field
+        room_type: roomName,
         phone: '',
     });
     
     const handleReservation = async(e) => {
         e.preventDefault();
         try {
-            const resReservation = await axios.post('http://localhost:8000/reservation/Reservation/', reservationData);
+            const resReservation = await axios.post(`${config.apiBaseUrl}/reservation/Reservation/`, reservationData);
             window.location.href = '/'
         } catch (error) {
             console.error(error.response?.data || error);
@@ -37,7 +38,7 @@ const Room = () => {
     <div className='room'>
         <div className="container">
             <div className="top">
-                <img src={image} />
+                <img src={`${config.apiBaseUrl}${image}`} />
             </div>
             <div className="bottom">
                 <div className="left">
@@ -66,7 +67,7 @@ const Room = () => {
                     </form>
                 </div>
                 <div className="right">
-                    <img src={image} />
+                    <img src={`${config.apiBaseUrl}${image}`} />
                     <span className='desc'>{description}</span>
                     <span className='price'>Rs. {price}</span>
                 </div>

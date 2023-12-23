@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Room.scss'
+import config from '../../config'
 
 const Room = ({item}) => {
   return (
     <div className="room">
         <div className="image">
-            <img src={item.image} />
+            <img src={`${config.apiBaseUrl}${item.image}`} />
         </div>
         <div className="details">
             <h3>{item.room_name}</h3>
